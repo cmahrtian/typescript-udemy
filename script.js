@@ -26,3 +26,38 @@ var Color;
 })(Color || (Color = {}));
 var myColor = Color.Blue;
 console.log(myColor);
+// any
+var car = 'BMW';
+console.log(car);
+car = { brand: 'BMW', series: 3 };
+console.log(car);
+// functions
+function returnMyName() {
+    return myName;
+}
+console.log(returnMyName());
+// void (for functions that don't return anything)
+function sayHello() {
+    console.log('Hello!');
+}
+// argument types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+// console.log(multiply(2, 'Chris'))
+console.log(multiply(2, 10));
+// function types
+var myMultiply;
+// myMultiply = sayHello
+// myMultiply()
+myMultiply = multiply;
+console.log(myMultiply(2, 2));
+// objects
+var userData = {
+    name: 'Chris',
+    age: 34
+};
+// userData = {
+//     a: 'Hello',
+//     b: 22
+// }
