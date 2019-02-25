@@ -61,3 +61,26 @@ var userData = {
 //     a: 'Hello',
 //     b: 22
 // }
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// complex = {}
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// union types
+var myRealRealAge;
+myRealRealAge = 34;
+// myRealRealAge = 'old'
+// check types
+var finalValue = 343;
+if (typeof finalValue == 'number') {
+    console.log('Final value is a number');
+}
