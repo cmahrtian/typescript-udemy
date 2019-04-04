@@ -27,3 +27,14 @@ var greet = function () { return console.log('Hello!'); };
 greet();
 var greetFriend = function (friend) { return console.log(friend); };
 greetFriend('Chris');
+// Default Parameters
+console.log('DEFAULT PARAMETERS');
+var countdown = function (start) {
+    if (start === void 0) { start = 10; }
+    console.log(start);
+    while (start > 0) {
+        start--;
+    }
+    console.log('Done!', start);
+};
+countdown(20);
