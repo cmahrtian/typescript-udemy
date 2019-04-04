@@ -41,4 +41,13 @@ countdown();
 //Rest & Spread
 console.log('REST & SPREAD');
 var numbers = [1, 10, 99, -5];
+console.log(Math.max(1, 10, 99, -5));
 console.log(Math.max.apply(Math, numbers));
+function makeArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return args;
+}
+console.log(makeArray('Dan', 1));

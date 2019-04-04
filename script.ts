@@ -46,4 +46,10 @@ countdown()
 //Rest & Spread
 console.log('REST & SPREAD')
 const numbers = [1, 10, 99, -5]
+console.log(Math.max(1, 10, 99, -5))
 console.log(Math.max(...numbers))
+
+function makeArray(...args: [string, number]) {
+    return args
+}
+console.log(makeArray('Dan', 1))
