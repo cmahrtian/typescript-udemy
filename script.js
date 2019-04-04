@@ -37,4 +37,8 @@ var countdown = function (start) {
     }
     console.log('Done!', start);
 };
-countdown(20);
+countdown();
+//Rest & Spread
+console.log('REST & SPREAD');
+var numbers = [1, 10, 99, -5];
+console.log(Math.max.apply(Math, numbers));

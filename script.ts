@@ -41,4 +41,9 @@ const countdown = (start: number = 10): void => {
     while (start > 0) { start -- }
     console.log('Done!', start)
 }
-countdown(20)
+countdown()
+
+//Rest & Spread
+console.log('REST & SPREAD')
+const numbers = [1, 10, 99, -5]
+console.log(Math.max(...numbers))
