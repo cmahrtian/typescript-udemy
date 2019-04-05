@@ -62,3 +62,7 @@ var userData = {
 };
 var userName = userData.userName, age = userData.age;
 console.log(userName, age);
+// Template Literals
+var myName = 'Chris';
+var greeting = "Hello, I'm " + myName + "!\nIt's nice to meet you!";
+console.log(greeting);
