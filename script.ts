@@ -53,3 +53,16 @@ function makeArray(...args: [string, number]) {
     return args
 }
 console.log(makeArray('Dan', 1))
+
+// Destructuring
+console.log('DESTRUCTURING')
+const myHobbies = ['Cooking', 'Sports']
+const [hobby1, hobby2] = myHobbies
+console.log(hobby1, hobby2)
+
+const userData = {
+    userName: 'Chris',
+    age: 34
+}
+const {userName, age} = userData
+console.log(userName, age)
