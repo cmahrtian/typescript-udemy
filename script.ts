@@ -25,10 +25,12 @@ person.printAge()
 
 // Inheritance
 class Chris extends Person {
-    name = 'Chris'
+    // name = 'Chris'
 
-    con
+    constructor(username: string) {
+        super('Chris', username)
+    }
 }
 
-const chris = new Chris('Dan', 'dmahr')
+const chris = new Chris('cmahr')
 console.log(chris)
