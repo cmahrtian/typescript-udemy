@@ -1,6 +1,6 @@
 class Person {
     name: string
-    private type: string
+    private type: string | undefined
     protected age: number = 34
 
     constructor(name: string, public username: string) {
@@ -29,6 +29,8 @@ class Chris extends Person {
 
     constructor(username: string) {
         super('Chris', username)
+        this.age = 27
+        console.log(this.type)
     }
 }
 

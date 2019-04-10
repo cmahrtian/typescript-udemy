@@ -37,7 +37,10 @@ var Chris = /** @class */ (function (_super) {
     __extends(Chris, _super);
     // name = 'Chris'
     function Chris(username) {
-        return _super.call(this, 'Chris', username) || this;
+        var _this = _super.call(this, 'Chris', username) || this;
+        _this.age = 27;
+        console.log(_this.type);
+        return _this;
     }
     return Chris;
 }(Person));
