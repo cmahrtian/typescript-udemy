@@ -128,3 +128,75 @@ var right = OnlyOne.getInstance();
 console.log(right.name);
 right.name = 'Something else';
 console.log(right.name);
+// Exercise 1 - Class
+console.log('EXERCISE 1 - Class');
+var Car = /** @class */ (function () {
+    function Car(name) {
+        this.acceleration = 0;
+        this.name = name;
+    }
+    Car.prototype.honk = function () {
+        console.log('Tooooot!');
+    };
+    Car.prototype.accelerate = function (speed) {
+        this.acceleration = this.acceleration + speed;
+    };
+    return Car;
+}());
+var car = new Car('BMW');
+car.honk();
+console.log(car.acceleration);
+car.accelerate(20);
+console.log(car.acceleration);
+// Exercise 2 - Inheritance
+console.log('EXERCISE 2 - Inheritance');
+var BaseObject = /** @class */ (function () {
+    function BaseObject() {
+        this.width = 0;
+        this.length = 0;
+    }
+    return BaseObject;
+}());
+var Rectangle = /** @class */ (function (_super) {
+    __extends(Rectangle, _super);
+    function Rectangle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Rectangle.prototype.calcSize = function () {
+        return this.width * this.length;
+    };
+    return Rectangle;
+}(BaseObject));
+var rectangle = new Rectangle();
+rectangle.width = 5;
+rectangle.length = 10;
+console.log(rectangle.calcSize());
+// Exercise 3 - Getters & Setters
+console.log('EXERCISE 3 - Getters & Setters');
+var humanBeing = /** @class */ (function () {
+    function humanBeing() {
+        this._firstName = '';
+    }
+    Object.defineProperty(humanBeing.prototype, "firstName", {
+        get: function () {
+            return this._firstName;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._firstName = value;
+            }
+            else {
+                this._firstName = '';
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return humanBeing;
+}());
+var human = new humanBeing();
+console.log(human.firstName);
+human.firstName = 'Ma';
+console.log(human.firstName);
+human.firstName = 'Chris';
+console.log(human.firstName);
