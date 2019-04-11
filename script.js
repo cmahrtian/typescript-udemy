@@ -39,10 +39,38 @@ var Chris = /** @class */ (function (_super) {
     function Chris(username) {
         var _this = _super.call(this, 'Chris', username) || this;
         _this.age = 27;
-        console.log(_this.type);
         return _this;
+        // console.log(this.type)
     }
     return Chris;
 }(Person));
 var chris = new Chris('cmahr');
 console.log(chris);
+// Getters & Setters
+var Plant = /** @class */ (function () {
+    function Plant() {
+        this._species = 'Default';
+    }
+    Object.defineProperty(Plant.prototype, "species", {
+        get: function () {
+            return this._species;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._species = value;
+            }
+            else {
+                this._species = 'Default';
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Plant;
+}());
+var plant = new Plant();
+console.log(plant.species);
+plant.species = 'AB';
+console.log(plant.species);
+plant.species = 'Green Plant';
+console.log(plant.species);

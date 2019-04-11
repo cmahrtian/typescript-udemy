@@ -30,9 +30,33 @@ class Chris extends Person {
     constructor(username: string) {
         super('Chris', username)
         this.age = 27
-        console.log(this.type)
+        // console.log(this.type)
     }
 }
 
 const chris = new Chris('cmahr')
 console.log(chris)
+
+// Getters & Setters
+class Plant {
+    private _species: string = 'Default'
+
+    get species() {
+        return this._species
+    }
+    
+    set species(value: string) {
+        if (value.length > 3) {
+            this._species = value
+        } else {
+            this._species = 'Default'
+        }
+    }
+}
+
+let plant = new Plant()
+console.log(plant.species)
+plant.species = 'AB'
+console.log(plant.species)
+plant.species = 'Green Plant'
+console.log(plant.species)
