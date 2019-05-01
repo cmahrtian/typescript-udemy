@@ -1,6 +1,20 @@
-import * as Circle from './math/circle'
-import calc from './math/rectangle'
+interface NamedPerson {
+    firstName: string
+}
 
-console.log(Circle.PI)
-console.log(Circle.calcCircumference(10))
-console.log(calc(20, 50))
+function greet(person: NamedPerson) {
+    console.log(`Hello, ${person.firstName}`)
+}
+
+function changeName(person: NamedPerson) {
+    person.firstName = 'Dan'
+}
+
+const person = {
+    firstName: 'Chris',
+    age: 34
+}
+
+greet(person)
+changeName(person)
+greet(person)
