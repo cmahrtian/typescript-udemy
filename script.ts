@@ -26,3 +26,22 @@ function printAll<T>(args: T[]) {
     args.forEach((element) => console.log(element))
 }
 printAll<string>(['Apple', 'Banana'])
+
+// Generic Types
+const echo2: <T>(data: T) => T = betterEcho
+
+console.log(echo2<string>('something'))
+
+// Generic Class
+class SimpleMath<T> {
+    baseValue: T
+    mutiplyValue: T
+    calculate(): number {
+        return +this.baseValue * +this.mutiplyValue
+    }
+}
+
+const simpleMath = new SimpleMath()
+simpleMath.baseValue = 10
+simpleMath.mutiplyValue = 20
+console.log(simpleMath.calculate())
