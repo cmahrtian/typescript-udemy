@@ -30,3 +30,8 @@ myPerson.firstName = 'Chris';
 myPerson.lastName = 'Null';
 greet(myPerson);
 myPerson.greet(myPerson.lastName);
+var myDoubleFunction;
+myDoubleFunction = function (value1, value2) {
+    return (value1 + value2) * 2;
+};
+console.log(myDoubleFunction(10, 20));
