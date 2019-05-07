@@ -33,7 +33,7 @@ const echo2: <T>(data: T) => T = betterEcho
 console.log(echo2<string>('something'))
 
 // Generic Class
-class SimpleMath<T> {
+class SimpleMath<T extends number | string> {
     baseValue: T
     mutiplyValue: T
     calculate(): number {
@@ -41,7 +41,7 @@ class SimpleMath<T> {
     }
 }
 
-const simpleMath = new SimpleMath()
-simpleMath.baseValue = 10
-simpleMath.mutiplyValue = 20
+const simpleMath = new SimpleMath<number>()
+simpleMath.baseValue = 'something'
+simpleMath.mutiplyValue = '20'
 console.log(simpleMath.calculate())
