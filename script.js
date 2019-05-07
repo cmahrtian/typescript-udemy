@@ -35,3 +35,11 @@ myDoubleFunction = function (value1, value2) {
     return (value1 + value2) * 2;
 };
 console.log(myDoubleFunction(10, 20));
+var oldPerson = {
+    age: 34,
+    firstName: 'Chris',
+    greet: function (lastName) {
+        console.log('Hello!');
+    }
+};
+console.log(oldPerson);
