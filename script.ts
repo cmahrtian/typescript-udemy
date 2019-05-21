@@ -18,3 +18,17 @@ function logging(value: Boolean) {
 class Car {
 
 }
+
+// Advanced
+function printable(constructorFn: Function) {
+    constructorFn.prototype.print = function() {
+        console.log(this)
+    }
+}
+
+@printable
+class Plant {
+    name = 'Green Plant'
+}
+const plant = new Plant();
+(<any>plant).print()
