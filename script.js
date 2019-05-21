@@ -48,9 +48,18 @@ var Plant = /** @class */ (function () {
 var plant = new Plant();
 plant.print();
 // Method Decorator
+// Property Decorator
 function editable(value) {
     return function (target, propName, descriptor) {
         descriptor.writable = value;
+    };
+}
+function overwritable(value) {
+    return function (target, propName) {
+        var newDescriptor = {
+            writable: value
+        };
+        return newDescriptor;
     };
 }
 var Project = /** @class */ (function () {
@@ -61,7 +70,7 @@ var Project = /** @class */ (function () {
         console.log(1000);
     };
     __decorate([
-        editable(false)
+        editable(true)
     ], Project.prototype, "calcBudget", null);
     return Project;
 }());
@@ -71,3 +80,4 @@ project.calcBudget = function () {
     console.log(2000);
 };
 project.calcBudget();
+console.log(project);
