@@ -8,3 +8,13 @@ class Person {
         console.log('Hi!')
     }
 }
+
+// Factory
+function logging(value: Boolean) {
+    return value ? logged : null
+}
+
+@logging(true)
+class Car {
+
+}
