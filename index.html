@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Learning Typescript</title>
+  <title>TypeScript & Third-Party Libraries</title>
 </head>
 <body>
-  
-<script src="node_modules/systemjs/dist/system.js"></script>
-<script>
+  <button>Click Me</button>
+<!-- <script src="node_modules/systemjs/dist/system.js"></script> -->
+<!-- <script>
   System.config({
     baseURL: '/',
     packages: {
@@ -19,6 +19,11 @@
     }
   })
   System.import('./script.js')
-</script>
+</script> -->
+  <script src="script.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 </body>
 </html>
