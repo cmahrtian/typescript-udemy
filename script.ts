@@ -1,1 +1,3 @@
-$('button').click(() => { alert('Button was clicked!') })
+$('button').click(() => { 
+    alert('Button was clicked!') 
+})
