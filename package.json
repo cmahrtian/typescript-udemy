@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^3.3.30",
     "lite-server": "^2.4.0"
   },
   "dependencies": {
